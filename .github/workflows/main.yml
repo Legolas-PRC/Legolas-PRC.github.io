@@ -26,10 +26,11 @@ jobs:
           cache: 'npm'
           # cache-dependency-path: subdir/yarn.lock
       - name: install yarn and build project
+        # 加一个日志打印命令，以触发后一个job
         run: | 
           yarn install
           yarn run dev
-          echo "构建完成"
+          echo "legolas.io" >> .vuepress/dist/CNAME
       - name: Deploy Github-Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
