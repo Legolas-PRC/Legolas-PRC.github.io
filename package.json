@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "vuepressTest",
   "scripts": {
-    "dev": "yarn SET NODE_OPTIONS=--openssl-legacy-provider && vuepress dev .",
-    "build": " SET NODE_OPTIONS=--openssl-legacy-provider && vuepress build ."
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
   },
   "main": "index.js",
   "license": "MIT",
