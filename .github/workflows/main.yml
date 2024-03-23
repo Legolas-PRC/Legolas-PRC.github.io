@@ -26,7 +26,9 @@ jobs:
           cache: 'npm'
           # cache-dependency-path: subdir/yarn.lock
       - name: install yarn and build project
-        run: yarn run dev
+        run: | 
+          yarn install
+          yarn run dev
       - name: Deploy Github-Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
