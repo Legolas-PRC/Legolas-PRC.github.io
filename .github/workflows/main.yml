@@ -31,7 +31,7 @@ jobs:
           npm insatll yarn
           yarn run dev
       - name: Deploy Github-Pages
-        uses: JamesIves/github-pages-deploy-action@4
+        uses: JamesIves/github-pages-deploy-action@4.5.0
         with:
           branch: gh-pages
           folder: .vuepress/dist
