@@ -1,0 +1,24 @@
+{
+  "name": "vuepressTest",
+  "version": "1.0.0",
+  "description": "vuepressTest",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.10",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-figure": "^0.2.0",
+    "markdown-it-fontawesome": "^0.3.0",
+    "markdown-it-ins": "^4.0.0",
+    "markdown-it-mermaid": "^0.2.5",
+    "markdown-it-smartarrows": "^1.0.1",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "moment": "^2.30.1",
+    "vuepress": "^1.9.10"
+  }
+}
