@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "vuepressTest",
   "scripts": {
-    "dev": "vuepress dev .",
-    "build": "vuepress build ."
+    "dev": "yarn SET NODE_OPTIONS=--openssl-legacy-provider && vuepress dev .",
+    "build": " SET NODE_OPTIONS=--openssl-legacy-provider && vuepress build ."
   },
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.9.10",
+    "easy-pdf-merge": "^0.2.6",
+    "github-buttons": "^2.27.0",
     "markdown-it-abbr": "^2.0.0",
     "markdown-it-figure": "^0.2.0",
     "markdown-it-fontawesome": "^0.3.0",
@@ -19,6 +21,7 @@
     "markdown-it-sub": "^2.0.0",
     "markdown-it-sup": "^2.0.0",
     "moment": "^2.30.1",
+    "qcloud-cdn-node-sdk": "^1.0.0",
     "vuepress": "^1.9.10"
   }
 }
