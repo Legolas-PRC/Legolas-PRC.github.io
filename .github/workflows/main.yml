@@ -1,0 +1,44 @@
+name: deploy website on Github-Pages when push
+
+# 什么event触发这个工作流
+on: 
+  push: 
+    branches: [main]
+
+jobs:
+  # job id
+  build:
+    runs-on: ubuntu-latest
+    # 定义变量矩阵
+    strategy:
+      matrix:
+        node-version: [latest]
+
+    # 一系列任务
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: download Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        # 入参的map,kv格式
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: subdir/yarn.lock
+      - name: install yarn and build project
+        run: |
+          npm ci
+          npm insatll yarn
+          yarn run dev
+      - name: Deploy Github-Pages
+        uses: JamesIves/github-pages-deploy-action@4
+        with:
+          branch: gh-pages
+          folder: .vuepress/dist
+
+      # - name: Refresh CDN
+      #   run: npm run deoply:refresh-cdn
+      #   env:
+      #     CDN_ID: ${{ secrets.CDN_ID }}
+      #     CDN_KEY: ${{ secrets.CDN_KEY }}
+    
