@@ -32,7 +32,7 @@ jobs:
         run: | 
           yarn install
           yarn run build
-          echo "legolas.io" >> .vuepress/dist/CNAME
+          echo "legolas-prc.github.io" >> .vuepress/dist/CNAME
       - name: Deploy Github-Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
