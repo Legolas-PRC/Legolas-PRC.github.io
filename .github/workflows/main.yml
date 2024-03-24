@@ -29,7 +29,7 @@ jobs:
         # 加一个日志打印命令，以触发后一个job
         run: | 
           yarn install
-          yarn run dev
+          yarn run build
           echo "legolas.io" >> .vuepress/dist/CNAME
       - name: Deploy Github-Pages
         uses: JamesIves/github-pages-deploy-action@v4
