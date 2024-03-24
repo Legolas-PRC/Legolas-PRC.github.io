@@ -12,7 +12,7 @@ jobs:
     # 定义变量矩阵
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [16.12.0]
 
     # 一系列任务
     steps:
