@@ -25,7 +25,7 @@ jobs:
         # 入参的map,kv格式
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: 'yarn'
           # cache-dependency-path: subdir/yarn.lock
       - name: install yarn and build project
         # 加一个日志打印命令，以触发后一个job
