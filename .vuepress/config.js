@@ -2,7 +2,7 @@ module.exports = {
   title: '陈钱的个人网站',
   description: 'welcome to my personal website',
   head: [
-    ['link', {rel: 'shortcut icon', type: "image/x-icon", href: `/favicon.ico`}]
+    ['link', {rel: 'icon', type: "image/jpeg", href: `/images/logo.jpg`}]
   ],
   host: 'localhost',
   port: 8080,
@@ -91,41 +91,41 @@ module.exports = {
     nav: [
       {text: '首页', link: '/'}, 
       {
-        text: '代码',
+        text: '关于',link: '/About'
         // 这里是下拉列表展现形式。
-        items: [
-          {
-            text: '文档工程 Awesome-Fenix',
-            link: 'https://github.com/fenixsoft/awesome-fenix'
-          }, {
-            text: '前端工程 Fenix\'s Bookstore',
-            link: 'https://github.com/fenixsoft/fenix-bookstore-frontend'
-          }, {
-            text: '前端工程在线示例 Fenix\'s Bookstore',
-            link: 'https://bookstore.icyfenix.cn'
-          }, {
-            text: '后端：单体架构 Spring Boot',
-            link: 'https://github.com/fenixsoft/monolithic_arch_springboot'
-          }, {
-            text: '后端：微服务架构 Spring Cloud',
-            link: 'https://github.com/fenixsoft/microservice_arch_springcloud'
-          }, {
-            text: '后端：微服务架构 Kubernetes',
-            link: 'https://github.com/fenixsoft/microservice_arch_kubernetes'
-          }, {
-            text: '后端：微服务架构 Istio',
-            link: 'https://github.com/fenixsoft/servicemesh_arch_istio'
-          }, {
-            text: '后端：无服务架构 AWS Lambda',
-            link: 'https://github.com/fenixsoft/serverless_arch_awslambda'
-          }
-        ]
+        // items: [
+        //   {
+        //     text: '文档工程 Awesome-Fenix',
+        //     link: 'https://github.com/fenixsoft/awesome-fenix'
+        //   }, {
+        //     text: '前端工程 Fenix\'s Bookstore',
+        //     link: 'https://github.com/fenixsoft/fenix-bookstore-frontend'
+        //   }, {
+        //     text: '前端工程在线示例 Fenix\'s Bookstore',
+        //     link: 'https://bookstore.icyfenix.cn'
+        //   }, {
+        //     text: '后端：单体架构 Spring Boot',
+        //     link: 'https://github.com/fenixsoft/monolithic_arch_springboot'
+        //   }, {
+        //     text: '后端：微服务架构 Spring Cloud',
+        //     link: 'https://github.com/fenixsoft/microservice_arch_springcloud'
+        //   }, {
+        //     text: '后端：微服务架构 Kubernetes',
+        //     link: 'https://github.com/fenixsoft/microservice_arch_kubernetes'
+        //   }, {
+        //     text: '后端：微服务架构 Istio',
+        //     link: 'https://github.com/fenixsoft/servicemesh_arch_istio'
+        //   }, {
+        //     text: '后端：无服务架构 AWS Lambda',
+        //     link: 'https://github.com/fenixsoft/serverless_arch_awslambda'
+        //   }
+        // ]
       },
-      {
-        text: 'PDF下载',
-        link: 'https://raw.githubusercontent.com/fenixsoft/awesome-fenix/gh-pages/pdf/the-fenix-project.pdf',
-        target: "_blank"
-      },
+      // {
+      //   text: 'PDF下载',
+      //   link: 'https://raw.githubusercontent.com/fenixsoft/awesome-fenix/gh-pages/pdf/the-fenix-project.pdf',
+      //   target: "_blank"
+      // },
       {text: '讨论区', link: '/board/', target: "_self"}
     ],
     sidebar: [
@@ -139,6 +139,13 @@ module.exports = {
         collapsable: true,
         path: '/About.md'
       },
+      {
+        title: '文章',
+        collapsable: true,
+        children:[
+          '/blogs/lambda-stream'
+        ]
+      }
       // {
       //   title: '目录',
       //   collapsable: false,

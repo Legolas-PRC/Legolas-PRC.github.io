@@ -15,7 +15,7 @@
 
       </span>
     </div>
-    <div v-if="lastUpdated" class="last-updated" v-if="showGitStar">
+    <div v-if="lastUpdated" class="last-updated">
       <span class="prefix" v-if="pageWords > 0">总字数:</span>
       <span class="words" v-if="pageWords > 0">{{ pageWords.toLocaleString() }}</span>
       <span class="prefix" v-if="pageWords > 0">字　</span>
@@ -79,7 +79,9 @@
       },
 
       showGitStar() {
-        return !this.$frontmatter.githubStar && this.$frontmatter.githubStar !== false
+        // 只要有值始终为false，为空则为true
+        // return !this.$frontmatter.githubStar && this.$frontmatter.githubStar !== fals;
+        return false;
       },
 
       editLinkText() {
