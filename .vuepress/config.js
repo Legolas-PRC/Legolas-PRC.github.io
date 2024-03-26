@@ -143,7 +143,7 @@ module.exports = {
         title: '文章',
         collapsable: true,
         children:[
-          '/blogs/lambda-stream'
+          '/articles/lambda-stream'
         ]
       }
       // {
